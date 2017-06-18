@@ -1,0 +1,22 @@
+<!--
+  post.html
+
+  A template for how the Medium post should will. Strava
+  data is this template's context.
+-->
+<h1><?= title ?></h1>
+<p>Since high school, I've kept a running log that's less about my workouts and more about <?= themes.join(', ') ?>, and such randomness. In the age of GPS-enabled, musical running watches, I chronicle it all on <a href="<?= stravaUrl ?>">my Strava account</a>, and this <a href="https://github.com/stvkas/last-months-strava-to-medium">Google Apps Script</a> automagically writes posts such as this one.</p>
+<hr>
+<?
+for (var i = 0; i < activities.length; i++) {
+    var activity = activities[i];
+?>
+    <h4><?= activity.title ?></h4>
+    <p><?= activity.time ?> on <?= activity.date ?>, in <?= activity.place ?></p>
+    <? for (var j = 0; j < activity.images.length; j++) { ?>
+        <img src="<?= activity.images[j] ?>">
+    <? } ?>
+    <blockquote><?= activity.description ?></blockquote>
+<? } ?>
+<hr>
+<p></p>
