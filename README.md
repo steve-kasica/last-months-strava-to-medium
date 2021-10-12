@@ -4,10 +4,6 @@ Since high school, I've kept a running log that's less about my workouts and mor
 
 ## Usage
 
-### Authenticating with Strava and Medium
-
-TK
-
 ### Running the Script
 
 You can simply run `lastMonthsStravaToMedium` and the script will generate a post of the most popular activities that month. However, I suggest setting this project up with a [trigger](https://developers.google.com/apps-script/guides/triggers/) that runs on the first of the month before that days run. My project triggers for this script looks like:
